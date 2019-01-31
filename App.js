@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import { StyleSheet, Text, View, Image } from 'react-native';
+import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
 import { random } from 'lodash';
 
 export default class App extends Component {
@@ -9,9 +9,11 @@ export default class App extends Component {
 
   renderNavbarItem(text: string) {
     return (
-      <View style={{ padding: 10, backgroundColor: this.randomColor() }}>
-        <Text style={{fontSize: 40}}>{text}</Text>
-      </View>
+      <TouchableOpacity underlayColor="white" onPress={() => {}}>
+        <View style={{ padding: 10, backgroundColor: this.randomColor() }}>
+          <Text style={{fontSize: 40}}>{text}</Text>
+        </View>
+      </TouchableOpacity>
     );
   } 
 
